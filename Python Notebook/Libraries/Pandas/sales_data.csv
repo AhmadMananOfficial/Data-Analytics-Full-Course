@@ -1,0 +1,21 @@
+OrderID,CustomerName,Product,Category,Quantity,UnitPrice,OrderDate,City
+1001,Ali Raza,Laptop,Electronics,1,1200,2023-01-10,Lahore
+1002,Sana Khan,Mobile Phone,Electronics,1,800,2023-01-11,Karachi
+1003,Ahmed Shah,Mouse,Accessories,2,20,2023-01-12,Islamabad
+1004,Ayesha Noor,Book,Books,3,15,2023-01-13,Faisalabad
+1005,Bilal Aslam,Headphones,Accessories,1,60,2023-01-14,Lahore
+1006,Zainab Malik,Tablet,Electronics,1,400,2023-01-15,Multan
+1007,Umer Farooq,Book,Books,2,15,2023-01-16,Rawalpindi
+1008,Hina Ahmed,Monitor,Electronics,1,300,2023-01-17,Sialkot
+1009,Imran Qureshi,Keyboard,Accessories,1,45,2023-01-18,Peshawar
+1010,Farah Yousaf,Book,Books,1,15,2023-01-19,Hyderabad
+1011,Kamran Aziz,Laptop,Electronics,1,1250,2023-01-20,Quetta
+1012,Nadia Ali,Mobile Phone,Electronics,2,750,2023-01-21,Gujranwala
+1013,Osama Tariq,Mouse,Accessories,1,25,2023-01-22,Abbottabad
+1014,Maria Iqbal,Book,Books,2,15,2023-01-23,Sargodha
+1015,Talha Javed,Headphones,Accessories,2,55,2023-01-24,Sahiwal
+1016,Fatima Riaz,Tablet,Electronics,1,420,2023-01-25,Gujrat
+1017,Zeeshan Haider,Book,Books,3,15,2023-01-26,Bahawalpur
+1018,Laiba Akram,Monitor,Electronics,1,310,2023-01-27,Dera Ghazi Khan
+1019,Hashir Khan,Keyboard,Accessories,1,40,2023-01-28,Mirpur
+1020,Hareem Asad,Book,Books,1,15,2023-01-29,Larkana

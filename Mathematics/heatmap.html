@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_ccc9f1d7b6ad0d686983d0599016d187 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdn.jsdelivr.net/gh/python-visualization/folium@main/folium/templates/leaflet_heat.min.js"></script>
+</head>
+<body>
+    
+    
+    <h3 style="position: fixed; top: 10px; left: 50px; z-index: 1000;
+               background-color: white; padding: 10px; border-radius: 5px;">
+        Pakistan City Temperatures (°C)
+    </h3>
+    
+            <div class="folium-map" id="map_ccc9f1d7b6ad0d686983d0599016d187" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_ccc9f1d7b6ad0d686983d0599016d187 = L.map(
+                "map_ccc9f1d7b6ad0d686983d0599016d187",
+                {
+                    center: [30.0, 70.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 6,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_dbcb776e4748bb0cec9104f29199f2da = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_dbcb776e4748bb0cec9104f29199f2da.addTo(map_ccc9f1d7b6ad0d686983d0599016d187);
+        
+    
+            var heat_map_e1f6e48f5c3827be649f6c3eba07c702 = L.heatLayer(
+                [[31.5497, 74.3436, 42], [24.8607, 67.0011, 38], [33.6844, 73.0479, 28], [30.1575, 71.5249, 45], [31.418, 73.0791, 40], [34.015, 71.5249, 35], [30.1798, 66.975, 30], [25.3969, 68.3778, 39]],
+                {
+  "minOpacity": 0.5,
+  "maxZoom": 12,
+  "radius": 20,
+  "blur": 15,
+  "gradient": {
+  0.4: "blue",
+  0.6: "lime",
+  0.7: "yellow",
+  1: "red",
+},
+}
+            );
+        
+    
+            heat_map_e1f6e48f5c3827be649f6c3eba07c702.addTo(map_ccc9f1d7b6ad0d686983d0599016d187);
+        
+    
+            var circle_marker_408417ef41dc7ae1d0fdf1bca283f272 = L.circleMarker(
+                [31.5497, 74.3436],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_ccc9f1d7b6ad0d686983d0599016d187);
+        
+    
+        var popup_e8ab71bcc06510f1a287c65ddfb31a8f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7f807fd68be04e08327bbf164fd7cdec = $(`<div id="html_7f807fd68be04e08327bbf164fd7cdec" style="width: 100.0%; height: 100.0%;">Lahore: 42°C</div>`)[0];
+                popup_e8ab71bcc06510f1a287c65ddfb31a8f.setContent(html_7f807fd68be04e08327bbf164fd7cdec);
+            
+        
+
+        circle_marker_408417ef41dc7ae1d0fdf1bca283f272.bindPopup(popup_e8ab71bcc06510f1a287c65ddfb31a8f)
+        ;
+
+        
+    
+    
+            var circle_marker_2f9c0c3c19b356b83cbf36ed8fc01e68 = L.circleMarker(
+                [24.8607, 67.0011],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_ccc9f1d7b6ad0d686983d0599016d187);
+        
+    
+        var popup_57d9f2dd60011b6ca7caee490851efdf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6eb6d3d010864e79bb32a154ba9de037 = $(`<div id="html_6eb6d3d010864e79bb32a154ba9de037" style="width: 100.0%; height: 100.0%;">Karachi: 38°C</div>`)[0];
+                popup_57d9f2dd60011b6ca7caee490851efdf.setContent(html_6eb6d3d010864e79bb32a154ba9de037);
+            
+        
+
+        circle_marker_2f9c0c3c19b356b83cbf36ed8fc01e68.bindPopup(popup_57d9f2dd60011b6ca7caee490851efdf)
+        ;
+
+        
+    
+    
+            var circle_marker_69e64b6c9a1d8e634b3220947bb5f843 = L.circleMarker(
+                [33.6844, 73.0479],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_ccc9f1d7b6ad0d686983d0599016d187);
+        
+    
+        var popup_9f1e59185388a8e135834178423991b0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0e5dc8a2b43762c79588963259b575aa = $(`<div id="html_0e5dc8a2b43762c79588963259b575aa" style="width: 100.0%; height: 100.0%;">Islamabad: 28°C</div>`)[0];
+                popup_9f1e59185388a8e135834178423991b0.setContent(html_0e5dc8a2b43762c79588963259b575aa);
+            
+        
+
+        circle_marker_69e64b6c9a1d8e634b3220947bb5f843.bindPopup(popup_9f1e59185388a8e135834178423991b0)
+        ;
+
+        
+    
+    
+            var circle_marker_40ad0b78fc7b1eac22117ae2e85086da = L.circleMarker(
+                [30.1575, 71.5249],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_ccc9f1d7b6ad0d686983d0599016d187);
+        
+    
+        var popup_b634917efee0cf4b0ca210b96e2cd947 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_14fdf707595c29ee4bcb35ade99daf17 = $(`<div id="html_14fdf707595c29ee4bcb35ade99daf17" style="width: 100.0%; height: 100.0%;">Multan: 45°C</div>`)[0];
+                popup_b634917efee0cf4b0ca210b96e2cd947.setContent(html_14fdf707595c29ee4bcb35ade99daf17);
+            
+        
+
+        circle_marker_40ad0b78fc7b1eac22117ae2e85086da.bindPopup(popup_b634917efee0cf4b0ca210b96e2cd947)
+        ;
+
+        
+    
+    
+            var circle_marker_9cff6f1bcf7c37deefea236243d6d24b = L.circleMarker(
+                [31.418, 73.0791],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_ccc9f1d7b6ad0d686983d0599016d187);
+        
+    
+        var popup_c0df73caf931cf581566ea011d93f782 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_04fdd5bd87b836ee6f948f30d4da3927 = $(`<div id="html_04fdd5bd87b836ee6f948f30d4da3927" style="width: 100.0%; height: 100.0%;">Faisalabad: 40°C</div>`)[0];
+                popup_c0df73caf931cf581566ea011d93f782.setContent(html_04fdd5bd87b836ee6f948f30d4da3927);
+            
+        
+
+        circle_marker_9cff6f1bcf7c37deefea236243d6d24b.bindPopup(popup_c0df73caf931cf581566ea011d93f782)
+        ;
+
+        
+    
+    
+            var circle_marker_8b4b73d6713151d84a0794410c1ff9ad = L.circleMarker(
+                [34.015, 71.5249],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_ccc9f1d7b6ad0d686983d0599016d187);
+        
+    
+        var popup_064fbfd0f4022a6733b1e77654767d39 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fe9211512c2fb9d0951e5893cf0a4b8e = $(`<div id="html_fe9211512c2fb9d0951e5893cf0a4b8e" style="width: 100.0%; height: 100.0%;">Peshawar: 35°C</div>`)[0];
+                popup_064fbfd0f4022a6733b1e77654767d39.setContent(html_fe9211512c2fb9d0951e5893cf0a4b8e);
+            
+        
+
+        circle_marker_8b4b73d6713151d84a0794410c1ff9ad.bindPopup(popup_064fbfd0f4022a6733b1e77654767d39)
+        ;
+
+        
+    
+    
+            var circle_marker_8ec8c232aa1945d3abfea29ac68cb022 = L.circleMarker(
+                [30.1798, 66.975],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_ccc9f1d7b6ad0d686983d0599016d187);
+        
+    
+        var popup_1db3039b6ab3e1bb1df9d10bc6a95136 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_502536a0b0919ec333328a6b4e7248d8 = $(`<div id="html_502536a0b0919ec333328a6b4e7248d8" style="width: 100.0%; height: 100.0%;">Quetta: 30°C</div>`)[0];
+                popup_1db3039b6ab3e1bb1df9d10bc6a95136.setContent(html_502536a0b0919ec333328a6b4e7248d8);
+            
+        
+
+        circle_marker_8ec8c232aa1945d3abfea29ac68cb022.bindPopup(popup_1db3039b6ab3e1bb1df9d10bc6a95136)
+        ;
+
+        
+    
+    
+            var circle_marker_0e697fc3042544bdfa5cea217bd5d302 = L.circleMarker(
+                [25.3969, 68.3778],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_ccc9f1d7b6ad0d686983d0599016d187);
+        
+    
+        var popup_3527cec9401b4be4a16727a484940d54 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_749e084b639cca1e7b78aef9d2302172 = $(`<div id="html_749e084b639cca1e7b78aef9d2302172" style="width: 100.0%; height: 100.0%;">Hyderabad: 39°C</div>`)[0];
+                popup_3527cec9401b4be4a16727a484940d54.setContent(html_749e084b639cca1e7b78aef9d2302172);
+            
+        
+
+        circle_marker_0e697fc3042544bdfa5cea217bd5d302.bindPopup(popup_3527cec9401b4be4a16727a484940d54)
+        ;
+
+        
+    
+</script>
+</html>
